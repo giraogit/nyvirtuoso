@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Contact Us</title>
+<link href="_css/nvs-headerInsert.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryValidationTextarea.css" rel="stylesheet" type="text/css" />
+<script src="SpryAssets/SpryValidationTextField.js" type="text/javascript"></script>
+<script src="SpryAssets/SpryValidationTextarea.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="text">
+<div class="nav"> <a href="#Mailing">Join our mailing list&nbsp;&nbsp;>&nbsp;</a>&nbsp;&nbsp; &nbsp;|&nbsp;&nbsp; &nbsp;<a href="#press">Press contact &gt;</a></div>
+<!--end..nav-->
+  <div class="mainText">
+    <h1>Contact Us</h1>
+    <p>For audition information or any other questions, please contact us using the form below, or by writing or calling us. </p>
+    <p>The Canticum Novum Singers<br />
+      c/o Canticorum Virtuosi, Inc.<br />
+     <!-- 2576 Broadway #203-->
+    1392 Madison Avenue<br />
+    #203 <br/>
+    New York, NY 10029<br />
+    914-582-3915    </p>
+    <form id="form1" name="infoform" method="post" action="file:///LeebeeHD/ Projects/Web Projects/CNS/process_contact.php">
+      <input name="request_info" type="hidden" id="request_info" value="questions" />
+      <p>Full Name:
+      <span id="sprytextfield1">
+      <input name="fullname_info" type="text" id="text1" size="54" />
+      <span class="textfieldRequiredMsg">A value is required.</span></span>
+       <br />
+       <br />
+       Email:<span id="sprytextfield2">
+      <input name="email_info" type="text" id="text2" size="60" />
+      <br />
+      <br />
+      <span class="textfieldRequiredMsg">A value is required.</span></span>
+       Comments or Questions:<br />
+        <span id="sprytextarea1">
+        <textarea name="textarea_info" id="textarea1" cols="50" rows="5"></textarea>
+        <br />
+        <br />
+      <span class="textareaRequiredMsg">A value is required.</span></span>
+
+        <button name="info_submit" id="button" value="Submit" onclick="javascript:submitInfoForm();">Submit</button>
+        <br />
+		<br />
+        All information is kept strictly confidential and will not be shared with any other organization without your explicit approval.      </p>
+    </form>
+    <p>..............................................................................................................................................................................................................</p>
+    <h1><a name="Mailing" id="Mailing"></a>Join Our Mailing List</h1>
+    <p>We periodically send out special offers and news related announcements, and would love to have you receive our newsletter. Use the easy form below to sign up for our email newsletter.<br />
+      </p>
+    <form id="form2" name="listform" method="post" action="file:///LeebeeHD/ Projects/Web Projects/CNS/process_contact.php">
+      <input name="list_info" type="hidden" id="list_info" value="mailinglist" />
+      <p>Full Name: <span id="sprytextfield3">
+      <input name="fullname_list" type="text" id="text3" size="54" />
+      <span class="textfieldRequiredMsg">A value is required.</span></span>
+        <br />
+        <br />
+        Email: <span id="sprytextfield4">
+        <input name="email_list" type="text" id="text4" size="60" />
+        <br />
+        <br />
+        <span class="textfieldRequiredMsg">A value is required.</span></span>
+
+        <button name="list_submit" id="button2" value="Submit" onclick="javascript:submitListForm();">Submit</button>
+      </p>
+      <br />
+</form>
+<p>..............................................................................................................................................................................................................</p>
+    <h1><a name="press" id="press"></a>Press Contact</h1>
+<p>Jeffrey James Arts Consulting
+  <br />
+  4Tay Records & <a href="http://www.ClassicalCDs.net" target="_blank">ClassicalCDs.net</a> &gt;<br />
+  45 Grant Avenue<br />
+  Farmingdale, NY 11735 USA
+  <br />
+  Tel: 516-586-3433
+  <br />
+  E-mail: <a href="mailto:jamesarts@att.net" target="_blank">jamesarts@att.net</a><br />
+  Website:<a href="http://www.jamesarts.com" target="_blank">www.jamesarts.com</a> &gt;<br />
+  <a href="http://songza.com/listen/jj-radio" target="_blank">JamesArts Radio &gt;</a></p>
+  </div>
+  <!--end.text--></div>
+<script type="text/javascript">
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "none");
+var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2", "none");
+var sprytextarea1 = new Spry.Widget.ValidationTextarea("sprytextarea1");
+var sprytextfield3 = new Spry.Widget.ValidationTextField("sprytextfield3");
+var sprytextfield4 = new Spry.Widget.ValidationTextField("sprytextfield4");
+
+	function submitInfoForm() {
+		document.getElementById("form1").submit();
+	}
+
+	function submitListForm() {
+		document.getElementById("form2").submit();
+	}
+
+</script>
+</body>
+</html>
